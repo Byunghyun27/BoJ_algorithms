@@ -8,6 +8,7 @@ public class Main {
     static String name;
     static int[] alpa;
     static StringBuilder sb;
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -26,7 +27,7 @@ public class Main {
     private static void palindrome() {
         sb = new StringBuilder();
         int odd = 0; //홀수의 개수
-        int num = 0;
+        int num = 0; //홀수 문자 저장
 
         for(int i=0; i<alpa.length; i++){
             if(alpa[i] % 2 != 0){

@@ -1,15 +1,15 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class Main {
+    final static int DRAW = 0;
+    final static int POBI_WIN = 1;
+    final static int CRONG_WIN = 2;
+    final static int EXCEPTIONS = -1;
+
     public static void main(String[] args) throws IOException {
-        int A = 0;
-        int B = 9;
-
-        System.out.println((A+B) /2);
-
-
+        System.out.println(DRAW);
     }
 }

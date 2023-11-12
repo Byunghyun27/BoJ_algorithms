@@ -13,6 +13,7 @@ class Point {
     }
 }
 
+//연구소3, youtube 해설 참조
 public class Main {
     static int N, M;
     static int[][] map;
@@ -43,6 +44,7 @@ public class Main {
                 //0 : 빈 공간, 1 : 벽, 2: 바이러스
                 if (map[i][j] == 0) {
                     emptyCnt++;
+
                 } else if (map[i][j] == 2) {
                     list.add(new Point(i, j, 0));
                 }
@@ -60,7 +62,6 @@ public class Main {
 
         System.out.println(result == Integer.MAX_VALUE ? -1 : result);
 
-
     }
 
     private static void dfs(int start, int cnt) {
@@ -73,6 +74,7 @@ public class Main {
             active[cnt] = list.get(i);
             dfs(i + 1, cnt + 1);
         }
+
     }
 
     private static void bfs(int emptyCnt) {
@@ -92,7 +94,6 @@ public class Main {
                 int ny = p.y + dy[i];
 
                 if (nx < 0 || nx >= N || ny < 0 || ny >= N) continue;
-
                 if (map[nx][ny] == 1 || Check[nx][ny]) continue;
 
                 if (map[nx][ny] == 0) emptyCnt--;

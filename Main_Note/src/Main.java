@@ -4,12 +4,27 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 public class Main {
-    final static int DRAW = 0;
-    final static int POBI_WIN = 1;
-    final static int CRONG_WIN = 2;
-    final static int EXCEPTIONS = -1;
-
+    static int N;
+    static int[] arr;
+    static int max = 0;
     public static void main(String[] args) throws IOException {
-        System.out.println(DRAW);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        N = Integer.parseInt(br.readLine());
+        arr = new int[N];
+
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        for(int i =0; i<N; i++){
+            arr[i] = Integer.parseInt(st.nextToken());
+        }
+
+        int sum = 0;
+        for(int i =0; i<N; i++){
+            if(sum + arr[i] > 0){
+                sum += arr[i];
+            } else continue;
+        }
+
+        System.out.println(sum);
     }
 }

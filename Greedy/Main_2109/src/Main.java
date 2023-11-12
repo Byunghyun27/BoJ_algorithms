@@ -14,6 +14,7 @@ class Schedule{
         this.price = price;
         this.day = day;
     }
+
 }
 
 public class Main {
